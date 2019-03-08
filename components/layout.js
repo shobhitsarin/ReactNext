@@ -55,9 +55,9 @@ class Layout extends React.Component {
         <ul className="navigation-bar">
           {this.state.links.map((link) => (
             <li className="navigation-level-one">
-              <a href='/plp'>
-                {link.name}
-              </a>
+             <Link href='/plp'>
+                <a>{link.name}</a>
+              </Link>
             </li>
           ))}
         </ul>
