@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
-export default ({ children, title = 'This is the default title' }) => (
+ const Layout = ({ children, title = 'This is the default title'}) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -13,11 +13,11 @@ export default ({ children, title = 'This is the default title' }) => (
       <nav>
         <Link href='/'>
           <a>Home</a>
-        </Link>{' '}
+        </Link>{'  ||  '}
         |
         <Link href='/plp'>
           <a>PLP</a>
-        </Link>{' '}
+        </Link>{'  ||  '}
        
       </nav>
     </header>
@@ -27,3 +27,7 @@ export default ({ children, title = 'This is the default title' }) => (
     <footer>{''}</footer>
   </div>
 )
+
+
+
+export default Layout;
