@@ -1,4 +1,4 @@
-import Layout from '../hocs/layout';
+import Layout from '../components/layout';
 import React from 'react';
 import Link from 'next/link'
 import * as request from 'superagent'
