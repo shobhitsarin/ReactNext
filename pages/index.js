@@ -22,7 +22,7 @@ const Index = (props) => {
 
   Index.getInitialProps = async function() {
  
-  const espotname = 'GlobalHeaderBannerAboveHeader';
+  const espotname = 'LOYAL_MiniBagMSpot';
   const data = await request
    .get('https://test1.childrensplace.com/api/getESpot')
    .set('espotname',espotname)
@@ -30,7 +30,9 @@ const Index = (props) => {
    .set('langid',-1)
    .set('storeid',10151)
    .set('devicetype','desktop')
-   .then(res => res.body.List)
+   .then(res => {
+     return res.body.List 
+    })
    .catch(err => {
      console.log("Error in API");
      console.log(err);
