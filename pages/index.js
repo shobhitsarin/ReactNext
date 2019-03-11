@@ -1,11 +1,9 @@
-import Layout from '../components/layout';
 import React from 'react';
-import Link from 'next/link'
 import * as request from 'superagent'
 
 const Index = (props) => {
   return (
-    <Layout title='HOME PAGE'>
+    <React.Fragment>
     <h1>Home Page - eSpots</h1>
     <ul>
       {props.data.map((eSpot) => (
@@ -16,9 +14,11 @@ const Index = (props) => {
         </li>
       ))}
     </ul>
-    </Layout>
+    </React.Fragment>
   )
 }
+
+Index.title = 'HOME PAGE';
 
   Index.getInitialProps = async function() {
  
